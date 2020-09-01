@@ -1,0 +1,42 @@
+{
+  "assessmentCollection": [
+    {
+      "id": "e0a91540-ebca-11ea-a107-c3d7fdc99cb2",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "month": "August - 2020",
+      "assessmentcount": 0,
+      "measurements": [
+        {
+          "id": "efa599b0-ebca-11ea-a107-c3d7fdc99cb2",
+          "date": "8/31/2020",
+          "height": 1.8,
+          "weight": 100,
+          "chest": 0,
+          "abdominal": 0,
+          "thigh": 0,
+          "upperArm": 0,
+          "waist": 0
+        }
+      ]
+    },
+    {
+      "id": "72b557b0-ec74-11ea-9a50-2bc978a36b8b",
+      "userid": "38e25010-eb9d-11ea-b272-2322d751f59b",
+      "month": "September - 2020",
+      "assessmentcount": 0,
+      "measurements": [
+        {
+          "id": "742e1500-ec74-11ea-9a50-2bc978a36b8b",
+          "date": "9/1/2020",
+          "height": 1.8,
+          "weight": "",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        }
+      ]
+    }
+  ]
+}

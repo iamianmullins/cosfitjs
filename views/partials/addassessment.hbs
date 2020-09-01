@@ -1,0 +1,45 @@
+<section class="ui green stacked segment">
+    <h2 class="ui header">
+        New Assessment
+    </h2>
+    <section class="ui inverted segment">
+        <form class="ui form" action="/assessmentlist/{{assessmentlist.id}}/addassessment" method="POST">
+            <div class="three fields">
+                <div class="field">
+                    <label class="ui inverted black label">Weight*</label>
+                    <input type="text" placeholder="Weight (kg)" name="weight">
+                </div>
+                <div class="field">
+                    <label class="ui inverted black label">Chest Measurement*</label>
+                    <input type="text" placeholder="Chest Measurement (cm)"  name="chest">
+                </div>
+                <div class="field">
+                    <label class="ui inverted black label">Abdominal Measurement*</label>
+                    <input type="text" placeholder="Abdominal Measurement (cm)"  name="abdominal">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label class="ui inverted black label">Thigh Measurement*</label>
+                    <input type="text" placeholder="Thigh Measurement (cm)"  name="thigh">
+                </div>
+                <div class="field">
+                    <label class="ui inverted black label">Upper Arm Measurement*</label>
+                    <input type="text" placeholder="Uppper Arm Measurement (cm)" name="upperArm">
+                </div>
+                <div class="field">
+                    <label class="ui inverted black label">Waist Measurement*</label>
+                    <input type="text" placeholder="Waist Measurement (cm)"  name="waist">
+                </div>
+            </div>
+
+            <button class="ui vertical animated fade fluid green labeled icon submit button" tabindex="0">
+                <div class="visible content"><i class="icon heartbeat"></i> Add Record</div>
+                <div class="hidden content">
+                    <i class="ui check circle icon"></i>
+                </div>
+            </button>
+        </form>
+    </section>
+
+</section>

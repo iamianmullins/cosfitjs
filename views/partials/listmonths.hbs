@@ -1,0 +1,91 @@
+<section class="ui green stacked segment">
+
+    {{#each months}}
+        <section class="ui inverted stacked segment">
+            <div class="ui grid">
+                <div class="four wide column">
+                    <!--Empty space-->
+                </div>
+                <div class="eight wide column">
+                    <h2 class="ui inverted center aligned header">
+                        {{monthname}}
+                    </h2>
+                </div>
+                <div class="four wide column">
+                    <h2 class="ui right aligned header">
+                        <form class = "ui basic form" action="/dashboard/deleteassessmentmonth/{{id}}" method=GET">
+                            <button class="ui vertical animated fade negative button" tabindex="0">
+                                <div class="hidden content">Delete</div>
+                                <div class="visible content">
+                                    <i class="ui inverted trash icon"></i>
+                                </div>
+                                </a>
+                            </button>
+                        </form>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="ui grid">
+                <div class="four wide column">
+                    <h2 class="ui inverted center aligned tiny header">
+                        <div class="ui inverted statistic">
+                            <div class="value">
+                                {{assessmentcount}}
+                            </div>
+                            <div class="label">
+                                Assessments
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+                <div class="four wide column">
+                    <h2 class="ui inverted center aligned tiny header">
+                        <div class="ui inverted statistic">
+                            <div class="value">
+                                {{assessmentcount}}
+                            </div>
+                            <div class="label">
+                                BMI start of month
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+                <div class="four wide column">
+                    <h2 class="ui inverted center aligned tiny header">
+                        <div class="ui inverted statistic">
+                            <div class="value">
+                                {{assessmentcount}}
+                            </div>
+                            <div class="label">
+                                BMI end of month
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+                <div class="four wide column">
+                    <h2 class="ui inverted center aligned tiny header">
+                        <div class="ui inverted statistic">
+                            <div class="value">
+                                {{assessmentcount}}
+                            </div>
+                            <div class="label">
+                                KG's lost
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+            </div>
+            <br>
+            <a href="/assessmentlist/{{id}}">
+                <button class="ui vertical animated fade fluid blue labeled icon button" tabindex="0">
+                    <div class="visible content"><i class="icon heartbeat"></i>View all assessments for {{monthname}}</div>
+                    <div class="hidden content">
+                        <i class="ui check circle icon"></i>
+                    </div>
+                </button>
+                </div>
+            </a>
+        </section>
+    {{/each}}
+</section>

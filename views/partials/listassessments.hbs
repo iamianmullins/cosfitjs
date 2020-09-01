@@ -1,0 +1,73 @@
+
+
+<section class="ui green stacked segment">
+    <table class="ui selectable inverted table">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Height</th>
+            <th>Weight Measurement</th>
+            <th>Chest Measurement</th>
+            <th>Abdominal Measurement</th>
+            <th>Thigh Measurement</th>
+            <th>Upper Arm Measurement</th>
+            <th>Waist Measurement</th>
+            <th>Delete Record</th>
+            <th>Edit Record</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each assessmentlist.measurements}}
+            <tr>
+                <td>
+                    {{date}}
+                </td>
+                <td>
+                    {{height}}
+                </td>
+                <td>
+                    {{weight}}
+                </td>
+                <td>
+                    {{chest}}
+                </td>
+                <td>
+                    {{abdominal}}
+                </td>
+                <td>
+                    {{thigh}}
+                </td>
+                <td>
+                    {{upperArm}}
+                </td>
+                <td>
+                    {{waist}}
+                </td>
+                <td>
+                    <button class="ui vertical animated fade fluid negative button" tabindex="0">
+                        <a href="/assessmentlist/{{../assessmentlist.id}}/deleteassessment/{{id}}">
+                            <div class="hidden content">Delete</div>
+                            <div class="visible content">
+                                <i class="ui inverted trash icon"></i>
+                            </div>
+                        </a>
+                    </button>
+                </td>
+                <td>
+                    <button class="ui vertical animated fade fluid orange button" tabindex="0">
+                        <a href="/assessment/{{../assessmentlist.id}}/editassessment/{{id}}">
+                            <div class="hidden content">Edit</div>
+                            <div class="visible content">
+                                <i class="ui inverted pencil icon"></i>
+                            </div>
+                        </a>
+                    </button>
+                </td>
+            </tr>
+        {{/each}}
+        <tr>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
