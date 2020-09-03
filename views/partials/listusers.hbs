@@ -1,0 +1,57 @@
+<section class="ui green stacked segment">
+    <div class="row">
+        <div class="sixteen wide column">
+
+            <table class="ui selectable inverted celled table">
+                <thead>
+                <tr>
+                    <th>Member Name</th>
+                    <th>ID/Email</th>
+                    <th>Number of assessments</th>
+                    <th>Current Weight</th>
+                    <th>View Member</th>
+                    <th>Delete Member</th>
+                </tr>
+                </thead>
+                <tbody>
+
+    {{#each members}}
+                <tr>
+                    <td><i class="orange user icon"></i> {{firstName}} {{lastName}}   </td>
+                    <td><i class="orange envelope open outline icon"></i> {{email}}   </td>
+                    <td> {{assessmentcount}}</td>
+
+                    <td>{{currentWeight}}</td>
+                    <td>
+                                <button class="ui vertical animated fluid button" tabindex="0">
+                                    <a href="/memberassessmentlist/{{id}}/viewmember/">
+                                        <div class="visible content">View Member</div>
+                                        <div class="hidden content">
+                                            <i class="ui blue user icon"></i>
+                                        </div>
+                                    </a>
+                                </button>
+                    </td>
+                    <td>
+                        <button class="ui vertical animated fluid red button" tabindex="0">
+                            <a href="/deletemember/${member.id}${} ">
+                                <div class="visible content">Delete Member</div>
+                                <div class="hidden content">
+                                    <i class="ui user minus icon"></i>
+                                </div>
+                            </a>
+                        </button>
+                    </td>
+                </tr>
+
+    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+</section>

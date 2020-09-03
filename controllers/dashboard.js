@@ -15,6 +15,9 @@ const dashboard = {
       months: measurementStore.getUserMeasurements(loggedInUser.id),
       month: utility.monthName(),
       user: loggedInUser,
+      bmi: utility.getBmi(loggedInUser),
+      bmicat: utility.getBmiCat(loggedInUser),
+      isideal: utility.idealBw(loggedInUser),
     };
     logger.info("about to render", measurementStore.getAllMonths());
     response.render("dashboard", viewData);
@@ -34,7 +37,7 @@ const dashboard = {
       userid: loggedInUser.id,
       month: utility.monthName(),
       assessmentcount: 0,
-      measurements: []
+      measurements: [],
     };
     logger.debug("Adding measurement month for ", newMeasurementMonth);
     measurementStore.addMonth(newMeasurementMonth);

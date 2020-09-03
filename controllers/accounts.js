@@ -41,7 +41,13 @@ const accounts = {
 
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
-    if (user) {
+    let isTrainer = user.trainer;
+    if (user&&isTrainer==="1") {
+      response.cookie("assessments", user.email);
+      logger.info(`logging in ${user.email}`);
+      response.redirect("/trainerdashboard");
+    }
+    else if (user) {
       response.cookie("assessments", user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");

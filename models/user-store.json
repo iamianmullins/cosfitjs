@@ -3,32 +3,70 @@
     {
       "firstName": "Homer",
       "lastName": "Simpson",
+      "dob": "10/06/1968",
+      "address": "742 Evergreen Terrace",
+      "gender": "Male",
+      "height": 1.778,
+      "startWeight": 73,
+      "currentWeight": "86",
+      "goalWeight": 70,
       "email": "homer@simpson.com",
       "password": "secret",
+      "trainer": "0",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
+      "dob": "10/06/1972",
+      "address": "742 Egrn Tce",
+      "gender": "Female",
+      "height": 1.65,
+      "startWeight": 60,
+      "currentWeight": 65,
+      "goalWeight": 70,
       "email": "marge@simpson.com",
       "password": "secret",
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
-    },
-    {
-      "firstName": "Ian",
-      "lastName": "Mullins",
-      "email": "mullins.89@hotmail.com",
-      "password": "secret",
-      "trainer": 1,
-      "id": "38e25010-eb9d-11ea-b272-2360b44ff59b"
+      "trainer": "0",
+      "id": "3a526997-5269-4d80-8273-0882735a5269"
     },
     {
       "firstName": "Trey",
       "lastName": "Ner",
       "email": "trainer@cosfit.com",
       "password": "secret",
-      "trainer": 1,
+      "trainer": "1",
       "id": "38e25010-eb9d-11ea-b272-2322d751f59b"
+    },
+    {
+      "firstName": "Hank",
+      "lastName": "Mullins",
+      "gender": "unspecified",
+      "dob": "2018-06-30",
+      "height": "1.2",
+      "startWeight": "35",
+      "currentWeight": "35",
+      "goalWeight": "37",
+      "address": "Ballygorey, Mooncoin. Kilkenny",
+      "email": "hank@mullins.com",
+      "password": "secret",
+      "trainer": "0",
+      "id": "6fe28120-edff-11ea-a6f7-9b0c4187d397"
+    },
+    {
+      "firstName": "Ian",
+      "lastName": "Mullins",
+      "gender": "Male",
+      "dob": "1989-09-17",
+      "height": "1.83",
+      "startWeight": "83",
+      "goalWeight": "80",
+      "address": "Ballygorey, Mooncoin. Kilkenny",
+      "email": "ian@mullins.com",
+      "password": "secret",
+      "trainer": "0",
+      "id": "92389b30-ee02-11ea-8660-0fa5a1f68519",
+      "currentWeight": "83"
     }
   ]
 }

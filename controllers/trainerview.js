@@ -3,20 +3,22 @@
 const logger = require("../utils/logger");
 const accounts = require("./accounts.js");
 const assessmentStore = require("../models/assessment-store");
+const userStore = require("../models/user-store");
 const uuid = require("uuid");
 const utility = require('../models/utility.js');
 
-const assessmentlist = {
+const trainerview = {
   index(request, response) {
-    const assessmentListId = request.params.id;
+    const currentMember = userStore.getUserById(request.params.id);
     const loggedInUser = accounts.getCurrentUser(request);
-    logger.debug("assessmentList id = ", assessmentListId);
+    logger.debug("assessmentList id = ", currentMember);
     const viewData = {
       title: "Assessment List",
-      assessmentlist: assessmentStore.getMonth(assessmentListId),
+      months: assessmentStore.getUserMeasurements(currentMember.id),
       user: loggedInUser,
+      member: currentMember,
     };
-    response.render("assessmentlist", viewData);
+    response.render("trainerview", viewData);
   },
 
   deleteMeasurement(request, response) {
@@ -24,12 +26,11 @@ const assessmentlist = {
     const measurementId = request.params.assessmentid;
     logger.debug(`Deleting measurement ${measurementId} from month ${monthId}`);
     assessmentStore.removeMeasurement(monthId, measurementId);
-    response.redirect("/assessmentlist/" + monthId);
+    response.redirect("/trainerview/" + monthId);
   },
 
   addMeasurement(request, response) {
     const monthId = request.params.id;
-    const loggedInUser = accounts.getCurrentUser(request);
     const newMeasurement = {
       id: uuid.v1(),
       date: utility.shortDate(),
@@ -42,10 +43,9 @@ const assessmentlist = {
       waist: request.body.waist,
     };
     logger.debug("New Assessment = ", newMeasurement);
-    loggedInUser.currentWeight = newMeasurement.weight;
     assessmentStore.addMeasurement(monthId, newMeasurement);
-    response.redirect("/assessmentlist/" + monthId);
+    response.redirect("/trainerview/" + monthId);
   }
 };
 
-module.exports = assessmentlist;
+module.exports = trainerview;

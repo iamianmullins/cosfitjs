@@ -5,9 +5,11 @@ const router = express.Router();
 
 const accounts = require("./controllers/accounts.js");
 const dashboard = require("./controllers/dashboard.js");
+const trainerdashboard = require("./controllers/trainerdashboard.js");
 const about = require("./controllers/about.js");
 const assessmentlist = require("./controllers/assessmentlist.js");
 const assessmentedit = require("./controllers/assessmentedit.js");
+const trainerview = require("./controllers/trainerview.js");
 
 router.get("/", accounts.index);
 router.get("/login", accounts.login);
@@ -20,7 +22,12 @@ router.get("/dashboard", dashboard.index);
 router.get("/dashboard/deleteassessmentmonth/:id", dashboard.deleteMeasurementMonth);
 router.post("/dashboard/addassessmentmonth", dashboard.addMeasurementMonth);
 
+router.get("/trainerdashboard", trainerdashboard.index);
+router.get("/trainerdashboard/deletemember/:id", trainerdashboard.deleteMember);
+
 router.get("/about", about.index);
+router.get("/memberassessmentlist/:id/viewmember", trainerview.index);
+
 router.get("/assessmentlist/:id", assessmentlist.index);
 router.get("/assessmentlist/:id/deleteassessment/:assessmentid", assessmentlist.deleteMeasurement);
 router.post("/assessmentlist/:id/addassessment", assessmentlist.addMeasurement);

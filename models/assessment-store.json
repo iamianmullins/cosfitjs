@@ -1,35 +1,123 @@
 {
   "assessmentCollection": [
     {
-      "id": "e0a91540-ebca-11ea-a107-c3d7fdc99cb2",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "id": "3ff25f70-ed65-11ea-9260-77e2fd838b8a",
+      "userid": "38e25010-eb9d-11ea-b272-2322d751f59b",
       "month": "August - 2020",
       "assessmentcount": 0,
+      "measurements": []
+    },
+    {
+      "id": "0db81f10-ed6d-11ea-b406-63612439779c",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "month": "September - 2020",
+      "assessmentcount": 4,
       "measurements": [
         {
-          "id": "efa599b0-ebca-11ea-a107-c3d7fdc99cb2",
-          "date": "8/31/2020",
+          "id": "37802d30-edfc-11ea-9a3f-a94e2b56eca6",
+          "date": "4/8/2020 - 16:43:30",
           "height": 1.8,
-          "weight": 100,
-          "chest": 0,
-          "abdominal": 0,
-          "thigh": 0,
-          "upperArm": 0,
-          "waist": 0
+          "weight": "20",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        },
+        {
+          "id": "0cfa1940-edfc-11ea-9a3f-a94e2b56eca6",
+          "date": "4/8/2020 - 16:42:19",
+          "height": 1.8,
+          "weight": "100",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        },
+        {
+          "id": "d3ae2140-edfb-11ea-8c92-ff26ef32b140",
+          "date": "4/8/2020 - 16:40:43",
+          "height": 1.8,
+          "weight": "200",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        },
+        {
+          "id": "ea108fb0-ed72-11ea-a4ae-691d447ce349",
+          "date": "4/8/2020 - 0:20:39",
+          "height": 1.8,
+          "weight": "86",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
         }
       ]
     },
     {
-      "id": "72b557b0-ec74-11ea-9a50-2bc978a36b8b",
-      "userid": "38e25010-eb9d-11ea-b272-2322d751f59b",
-      "month": "September - 2020",
-      "assessmentcount": 0,
+      "id": "a6a7be50-edeb-11ea-9db3-95c660b99fb7",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "month": "August - 2020",
+      "assessmentcount": 3,
       "measurements": [
         {
-          "id": "742e1500-ec74-11ea-9a50-2bc978a36b8b",
-          "date": "9/1/2020",
+          "id": "5f53f260-edfc-11ea-9a3f-a94e2b56eca6",
+          "date": "4/8/2020 - 16:44:37",
+          "height": 1.8,
+          "weight": "86",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        },
+        {
+          "id": "eff26880-edeb-11ea-9c71-e36cdb747f52",
+          "date": "4/8/2020 - 14:46:58",
           "height": 1.8,
           "weight": "",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        },
+        {
+          "id": "e3038e60-edeb-11ea-9c71-e36cdb747f52",
+          "date": "4/8/2020 - 14:46:36",
+          "height": 1.8,
+          "weight": "",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
+        }
+      ]
+    },
+    {
+      "id": "ad194f40-edfc-11ea-9a3f-a94e2b56eca6",
+      "userid": "a5f91f10-edfc-11ea-9a3f-a94e2b56eca6",
+      "month": "September - 2020",
+      "assessmentcount": 0,
+      "measurements": []
+    },
+    {
+      "id": "a9516310-ee02-11ea-8660-0fa5a1f68519",
+      "userid": "92389b30-ee02-11ea-8660-0fa5a1f68519",
+      "month": "September - 2020",
+      "assessmentcount": 1,
+      "measurements": [
+        {
+          "id": "ad2f3980-ee02-11ea-8660-0fa5a1f68519",
+          "date": "4/8/2020 - 17:29:45",
+          "height": 1.8,
+          "weight": "900",
           "chest": "",
           "abdominal": "",
           "thigh": "",

@@ -2,15 +2,42 @@
 <section class="ui stacked segment">
     <br>
     <div class="ui  grid">
+        <div class="three wide column">
+        </div>
+        <div class="four wide column">
+            <h2 class="ui center aligned icon header">
+                <i class="circular balance scale icon"></i>
+                Member
+                <hr>
+                {{user.firstName}} {{user.lastName}}
+            </h2>
+        </div>
+        <div class="two wide column">
+        </div>
+        <div class="four wide column">
+            <h2 class="ui center aligned icon header">
+                <i class="circular balance scale icon"></i>
+                Goal weight: 90kg
+                <hr>
+                Current weight: {{user.currentWeight}}kg
+            </h2>
+        </div>
+    </div>
+    <div class="three wide column">
+    </div>
+    <div class="ui  grid">
+
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
                 <i class="circular heart icon"></i>
                 Weight Classification
                 <hr>
                 <p>
-                    Overweight
+                    {{isideal}}
                 </p>
             </h2>
+        </div>
+        <div class="two wide column">
         </div>
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
@@ -18,9 +45,11 @@
                 BMI
                 <hr>
                 <p>
-                    32.1
+                    {{bmi}}
                 </p>
             </h2>
+        </div>
+        <div class="two wide column">
         </div>
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
@@ -28,18 +57,11 @@
                 BMI Category
                 <hr>
                 <p>
-                    Moderately Obese
+                    {{bmicat}}
                 </p>
             </h2>
         </div>
-        <div class="four wide column">
-            <h2 class="ui center aligned icon header">
-                <i class="circular balance scale icon"></i>
-                Goal weight: 90kg
-                <hr>
-                Current weight: 105kg
-            </h2>
-        </div>
+
     </div>
     <br>
 </section>

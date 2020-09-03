@@ -1,6 +1,25 @@
 {{> welcomemenu id="signup"}}
 <div class="ui grid">
 
+    <script>
+        $('.ui.dropdown')
+                .dropdown({
+                    values: [
+                        {
+                            name: 'Male',
+                            value: 'male'
+                        },
+                        {
+                            name     : 'Female',
+                            value    : 'female',
+                            selected : true
+                        }
+                    ]
+                })
+        ;
+    </script>
+
+
     {{> branding}}
 
     <div class="four wide column">
@@ -11,22 +30,58 @@
             <h3 class="ui header">Register</h3>
             <div class="two fields">
                 <div class="field">
-                    <label>First Name</label>
-                    <input placeholder="First Name" type="text"  name="firstName">
+                    <label>First Name*</label>
+                    <input placeholder="First Name" type="text"  name="firstName" required>
                 </div>
                 <div class="field">
-                    <label>Last Name</label>
-                    <input placeholder="Last Name" type="text"  name="lastName">
+                    <label>Last Name*</label>
+                    <input placeholder="Last Name" type="text"  name="lastName" required>
                 </div>
             </div>
-            <div class="field">
-                <label>Email</label>
-                <input placeholder="Email" type="text" name="email">
+            <div class="two fields">
+                <div class="field">
+                    <label>Gender*</label>
+                    <select name="gender" class="ui dropdown" id="select" required>
+                        <option value="unspecified">Unspecified</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>DOB*</label>
+                    <input placeholder="Date of Birth" type="date" name="dob" required>
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Height*</label>
+                    <input placeholder="Height" type="text" name="height" required>
+                </div>
+                <div class="field">
+                    <label>Weight*</label>
+                    <input placeholder="Weight" type="text" name="startWeight" required>
+                </div>
+                <div class="field">
+                    <label>Goal Weight*</label>
+                    <input placeholder="Goal Weight" type="text" name="goalWeight" required>
+                </div>
+
             </div>
             <div class="field">
-                <label>Password</label>
-                <input type="password" name="password">
+                <label>Address</label>
+                <input placeholder="Address" type="text"  name="address">
             </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Email*</label>
+                    <input placeholder="Email" type="text" name="email" required>
+                </div>
+                <div class="field">
+                    <label>Password*</label>
+                    <input type="password" name="password" required>
+                </div>
+            </div>
+            <input type="hidden" id="custId" name="trainer" value="0">
             <button class="ui blue submit button">Submit</button>
         </form>
     </div>

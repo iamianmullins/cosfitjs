@@ -21,6 +21,7 @@ const assessmentStore = {
     return this.store.findBy(this.collection, { userid: userid });
   },
 
+
   addMonth(month) {
     this.store.add(this.collection, month);
     this.store.save();
@@ -39,13 +40,15 @@ const assessmentStore = {
 
   addMeasurement(id, measurement) {
     const month = this.getMonth(id);
-    month.measurements.push(measurement);
+    month.assessmentcount++;
+    month.measurements.unshift(measurement);
     this.store.save();
   },
 
   removeMeasurement(id, measurementId) {
     const month = this.getMonth(id);
     const measurementList = month.measurements;
+    month.assessmentcount--;
     _.remove(measurementList, { id: measurementId });
     this.store.save();
   },
