@@ -37,36 +37,6 @@
       "password": "secret",
       "trainer": "1",
       "id": "38e25010-eb9d-11ea-b272-2322d751f59b"
-    },
-    {
-      "firstName": "Hank",
-      "lastName": "Mullins",
-      "gender": "unspecified",
-      "dob": "2018-06-30",
-      "height": "1.2",
-      "startWeight": "35",
-      "currentWeight": "35",
-      "goalWeight": "37",
-      "address": "Ballygorey, Mooncoin. Kilkenny",
-      "email": "hank@mullins.com",
-      "password": "secret",
-      "trainer": "0",
-      "id": "6fe28120-edff-11ea-a6f7-9b0c4187d397"
-    },
-    {
-      "firstName": "Ian",
-      "lastName": "Mullins",
-      "gender": "Male",
-      "dob": "1989-09-17",
-      "height": "1.83",
-      "startWeight": "83",
-      "goalWeight": "80",
-      "address": "Ballygorey, Mooncoin. Kilkenny",
-      "email": "ian@mullins.com",
-      "password": "secret",
-      "trainer": "0",
-      "id": "92389b30-ee02-11ea-8660-0fa5a1f68519",
-      "currentWeight": "83"
     }
   ]
 }

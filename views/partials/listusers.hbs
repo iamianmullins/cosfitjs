@@ -24,7 +24,7 @@
                     <td>{{currentWeight}}</td>
                     <td>
                                 <button class="ui vertical animated fluid button" tabindex="0">
-                                    <a href="/memberassessmentlist/{{id}}/viewmember/">
+                                    <a href="/trainerassessmentlist/{{id}}/viewmember/">
                                         <div class="visible content">View Member</div>
                                         <div class="hidden content">
                                             <i class="ui blue user icon"></i>
@@ -33,14 +33,13 @@
                                 </button>
                     </td>
                     <td>
-                        <button class="ui vertical animated fluid red button" tabindex="0">
-                            <a href="/deletemember/${member.id}${} ">
-                                <div class="visible content">Delete Member</div>
-                                <div class="hidden content">
-                                    <i class="ui user minus icon"></i>
-                                </div>
-                            </a>
-                        </button>
+                        <form class = "ui form" action="/trainerdashboard/deletemember/{{id}}" method=GET">
+                            <button class="ui vertical animated fluid red button" tabindex="0">
+                                    <div class="visible content">Delete Member</div>
+                                    <div class="hidden content">
+                                        <i class="ui user minus icon"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
 

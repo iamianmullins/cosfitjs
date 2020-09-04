@@ -30,6 +30,7 @@ const utility = {
     return bmiRounded;
   },
 
+
   getBmiCat(member) {
     const weight = member.currentWeight;
     const height = member.height;

@@ -38,6 +38,8 @@ const dashboard = {
       month: utility.monthName(),
       assessmentcount: 0,
       measurements: [],
+      startingWeight: 0,
+      latestWeight: 0,
     };
     logger.debug("Adding measurement month for ", newMeasurementMonth);
     measurementStore.addMonth(newMeasurementMonth);

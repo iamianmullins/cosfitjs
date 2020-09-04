@@ -29,7 +29,7 @@ const trainerdashboard = {
     logger.debug(`Deleting Member ${memberId}`);
     userStore.removeMember(memberId);
     response.redirect("/trainerdashboard");
-  }
+  },
 };
 
 module.exports = trainerdashboard;

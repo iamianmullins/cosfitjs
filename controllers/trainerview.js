@@ -15,8 +15,10 @@ const trainerview = {
     const viewData = {
       title: "Assessment List",
       months: assessmentStore.getUserMeasurements(currentMember.id),
+      variance: assessmentStore.getUserMeasurements(currentMember.id).latestWeight-assessmentStore.getUserMeasurements(currentMember.id).startingWeight,
       user: loggedInUser,
       member: currentMember,
+      memberid: currentMember.id,
     };
     response.render("trainerview", viewData);
   },

@@ -10,6 +10,7 @@ const about = require("./controllers/about.js");
 const assessmentlist = require("./controllers/assessmentlist.js");
 const assessmentedit = require("./controllers/assessmentedit.js");
 const trainerview = require("./controllers/trainerview.js");
+const trainerassessmentlist = require("./controllers/trainerassessmentlist.js");
 
 router.get("/", accounts.index);
 router.get("/login", accounts.login);
@@ -24,9 +25,11 @@ router.post("/dashboard/addassessmentmonth", dashboard.addMeasurementMonth);
 
 router.get("/trainerdashboard", trainerdashboard.index);
 router.get("/trainerdashboard/deletemember/:id", trainerdashboard.deleteMember);
+router.get("/trainerassessmentlist/:id/viewmember", trainerview.index);
+router.get("/trainerassessmentlist/:id/member/:userid", trainerassessmentlist.index);
+router.post("/trainerassessmentlist/:id/updatecomment/:assessmentId", trainerassessmentlist.updateComment);
 
 router.get("/about", about.index);
-router.get("/memberassessmentlist/:id/viewmember", trainerview.index);
 
 router.get("/assessmentlist/:id", assessmentlist.index);
 router.get("/assessmentlist/:id/deleteassessment/:assessmentid", assessmentlist.deleteMeasurement);

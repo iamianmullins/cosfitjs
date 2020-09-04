@@ -38,12 +38,6 @@ const assessmentStore = {
     this.store.save();
   },
 
-  addMeasurement(id, measurement) {
-    const month = this.getMonth(id);
-    month.assessmentcount++;
-    month.measurements.unshift(measurement);
-    this.store.save();
-  },
 
   removeMeasurement(id, measurementId) {
     const month = this.getMonth(id);
@@ -54,10 +48,25 @@ const assessmentStore = {
   },
 
   getAssessment(id, assessmentId) {
-    const assessmentMonth = this.store.findOneBy(this.collection, { id: id });
-    const assessments = assessmentMonth.measurements.filter(assessment => assessment.id == assessmentId);
+    const month = this.getMonth(id);
+    const assessments = month.measurements.filter(assessment => assessment.id == assessmentId);
     return assessments[0];
   },
+
+  addMeasurement(id, measurement) {
+    const month = this.getMonth(id);
+    month.assessmentcount++;
+    if(month.measurements.length>0){
+      month.latestWeight = measurement.weight;
+    }
+    else if(month.measurements.length===0){
+      month.startingWeight = measurement.weight;
+      month.latestWeight = measurement.weight;
+    }
+    month.measurements.unshift(measurement);
+    this.store.save();
+  },
+
 
   updateAssessment(assessment, updatedAssessment) {
     assessment.weight = updatedAssessment.weight;
@@ -66,6 +75,7 @@ const assessmentStore = {
     assessment.thigh = updatedAssessment.thigh;
     assessment.upperArm = updatedAssessment.upperArm;
     assessment.waist = updatedAssessment.waist;
+    assessment.comment = updatedAssessment.comment;
     this.store.save();
   }
 };
