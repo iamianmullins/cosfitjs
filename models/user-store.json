@@ -37,6 +37,14 @@
       "password": "secret",
       "trainer": "1",
       "id": "38e25010-eb9d-11ea-b272-2322d751f59b"
+    },
+    {
+      "firstName": "Ian",
+      "lastName": "Mullins",
+      "email": "ian@mullins.com",
+      "password": "secret",
+      "trainer": "1",
+      "id": "38e25010-eb9d-11ea-b272-2322d751f59b"
     }
   ]
 }

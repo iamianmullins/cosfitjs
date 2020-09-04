@@ -1,16 +1,16 @@
 {
   "assessmentCollection": [
     {
-      "id": "af4ad6a0-ee3b-11ea-bfd0-ad4f68824add",
+      "id": "39224dc0-eea7-11ea-a6ab-8d97f0723497",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "month": "September - 2020",
-      "assessmentcount": 2,
+      "assessmentcount": 3,
       "measurements": [
         {
-          "id": "fa9fdd80-ee40-11ea-8314-e3571f50f0aa",
-          "date": "5/8/2020 - 0:55:43",
+          "id": "61e09a00-eea7-11ea-a6ab-8d97f0723497",
+          "date": "5/8/2020 - 13:8:45",
           "height": 1.8,
-          "weight": "86",
+          "weight": "70",
           "chest": "",
           "abdominal": "",
           "thigh": "",
@@ -18,20 +18,39 @@
           "waist": ""
         },
         {
-          "id": "b5e3ae60-ee3b-11ea-bfd0-ad4f68824add",
-          "date": "5/8/2020 - 0:18:1",
+          "id": "3f806670-eea7-11ea-a6ab-8d97f0723497",
+          "date": "5/8/2020 - 13:7:48",
           "height": 1.8,
           "weight": "100",
           "chest": "",
           "abdominal": "",
           "thigh": "",
           "upperArm": "",
-          "waist": "",
-          "comment": "Trey: WOOHOO"
+          "waist": ""
+        },
+        {
+          "id": "3de04b00-eea7-11ea-a6ab-8d97f0723497",
+          "date": "5/8/2020 - 13:7:45",
+          "height": 1.8,
+          "weight": "86",
+          "chest": "",
+          "abdominal": "",
+          "thigh": "",
+          "upperArm": "",
+          "waist": ""
         }
       ],
-      "startingWeight": "100",
-      "latestWeight": "86"
+      "startingWeight": "86",
+      "latestWeight": "70"
+    },
+    {
+      "id": "9a3d5000-eea7-11ea-a6ab-8d97f0723497",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "month": "September - 2020",
+      "assessmentcount": 0,
+      "measurements": [],
+      "startingWeight": 0,
+      "latestWeight": 0
     }
   ]
 }

@@ -18,7 +18,7 @@ const assessmentStore = {
   },
 
   getUserMeasurements(userid) {
-    return this.store.findBy(this.collection, { userid: userid });
+    return _.reverse(this.store.findBy(this.collection, { userid: userid }));
   },
 
 
