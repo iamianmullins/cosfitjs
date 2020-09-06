@@ -36,12 +36,24 @@
     {
       "id": "585e43f0-efc5-11ea-adfb-7fef63b73dec",
       "firstName": "Homer",
-      "lastName": "Homer",
+      "lastName": "Simpson",
       "gender": "Undisclosed",
       "dob": "6/8/2020 ",
       "address": "tbd",
       "phoneNumber": "01",
       "email": "homer@simpson.com",
+      "password": "secret",
+      "trainer": "1"
+    },
+    {
+      "id": "9b5aea50-f02e-11ea-a4e9-ab63df0e23cf",
+      "firstName": "Jen",
+      "lastName": "Mullins",
+      "gender": "Undisclosed",
+      "dob": "0/8/2020",
+      "address": "tbd",
+      "phoneNumber": "01",
+      "email": "jen@simpson.com",
       "password": "secret",
       "trainer": "1"
     }

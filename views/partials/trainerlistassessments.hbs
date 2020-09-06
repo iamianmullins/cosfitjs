@@ -3,6 +3,7 @@
         <table class="ui center aligned selectable inverted fluid table">
             <thead>
             <tr>
+                <th>Trend</th>
                 <th>Date</th>
                 <th>Height</th>
                 <th>Weight Measurement</th>
@@ -17,6 +18,14 @@
             <tbody>
 
             <tr>
+                <td>
+                {{#if trend}}
+                    <span class="ui green left ribbon label"><i
+                            class="ui large arrow alternate circle down icon"></i></span>
+                {{else}}
+                    <span class="ui red left ribbon label"><i class="ui large arrow alternate circle up icon"></i></span>
+                {{/if}}
+                </td>
                 <td>
                     {{date}}
                 </td>

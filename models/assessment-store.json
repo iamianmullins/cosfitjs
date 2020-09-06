@@ -35,41 +35,6 @@
       "trend": true
     },
     {
-      "id": "6b4861d0-efbb-11ea-b500-a5920bcb332b",
-      "userid": "eb86b8f0-efb7-11ea-8ae7-fb8a1f4dcbf3",
-      "month": "September - 2020",
-      "assessmentcount": 2,
-      "startingWeight": 86,
-      "latestWeight": 900,
-      "measurements": [
-        {
-          "id": "76678500-efbb-11ea-b500-a5920bcb332b",
-          "date": "6/8/2020 - 22:5:1",
-          "height": 1.6,
-          "weight": 900,
-          "chest": 0,
-          "abdominal": 0,
-          "thigh": 0,
-          "upperArm": 0,
-          "waist": 0,
-          "trend": false
-        },
-        {
-          "id": "747997b0-efbb-11ea-b500-a5920bcb332b",
-          "date": "6/8/2020 - 22:4:58",
-          "height": 1.6,
-          "weight": 86,
-          "chest": 0,
-          "abdominal": 0,
-          "thigh": 0,
-          "upperArm": 0,
-          "waist": 0,
-          "trend": true
-        }
-      ],
-      "trend": false
-    },
-    {
       "id": "41af9ea0-efbc-11ea-a56c-e12d16c2dbdb",
       "userid": "eb86b8f0-efb7-11ea-8ae7-fb8a1f4dcbf3",
       "month": "September - 2020",
@@ -87,7 +52,8 @@
           "thigh": 0,
           "upperArm": 0,
           "waist": 0,
-          "trend": true
+          "trend": true,
+          "comment": "Homer: Well done, good workout"
         },
         {
           "id": "5fa09460-efc0-11ea-90b7-17289e8dd4e2",

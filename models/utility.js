@@ -30,7 +30,7 @@ const utility = {
     const hours = now.getHours();
     const minu = now.getMinutes();
     const sec = now.getSeconds();
-    return (day + "/" + month + "/" + year + " - " + hours + ":" + minu + ":" + sec);
+    return (day + "/" + month + "/" + year);
   },
 
   getBmi(member) {
