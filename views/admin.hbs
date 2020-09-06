@@ -6,7 +6,6 @@
 </nav>
 
 
-
 <section class="ui raised segment">
     <header class="ui header">
         Admin Panel
@@ -14,7 +13,8 @@
 
 
     <div class="ui red message">Only use this screen if you are authorised to do so.
-        If you are not authorised, please log out immediately!</div>
+        If you are not authorised, please log out immediately!
+    </div>
     <div class="sixteen wide column">
         <header class="ui header">
             Add Trainer
@@ -65,23 +65,23 @@
         </thead>
         <tbody>
         {{#each trainers}}
-        <tr>
+            <tr>
 
-            <td> {{firstName}} {{lastName}}</td>
-            <td> {{email}} </td>
-            <td>
-                <a href="/admin/deleteUser/{{id}}">
-                <button class="ui vertical animated fluid negative button" tabindex="0">
-                    <div class="visible content">Delete Trainer</div>
-                    <div class="hidden content">
-                        <i class="ui inverted user minus icon"></i>
-                    </div>
-            </button>
-                </a>
-            </td>
-        </tr>
-        <tr>
-{{/each}}
+                <td> {{firstName}} {{lastName}}</td>
+                <td> {{email}} </td>
+                <td>
+                    <a href="/admin/deleteUser/{{id}}">
+                        <button class="ui vertical animated fluid negative button" tabindex="0">
+                            <div class="visible content">Delete Trainer</div>
+                            <div class="hidden content">
+                                <i class="ui inverted user minus icon"></i>
+                            </div>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+        {{/each}}
 
         </tbody>
     </table>
@@ -104,13 +104,13 @@
                 <td> {{email}} </td>
                 <td>
                     <a href="/admin/deleteUser/{{id}}">
-                    <button class="ui vertical animated fluid negative button" tabindex="0">
+                        <button class="ui vertical animated fluid negative button" tabindex="0">
 
-                        <div class="visible content">Delete Member</div>
-                        <div class="hidden content">
-                            <i class="ui inverted user minus icon"></i>
-                        </div>
-                </button>
+                            <div class="visible content">Delete Member</div>
+                            <div class="hidden content">
+                                <i class="ui inverted user minus icon"></i>
+                            </div>
+                        </button>
                     </a>
                 </td>
             </tr>

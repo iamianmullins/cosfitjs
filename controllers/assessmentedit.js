@@ -10,7 +10,6 @@ const assessmentEdit = {
     const monthId = request.params.id;
     const assessmentId = request.params.assessmentId;
     const loggedInUser = accounts.getCurrentUser(request);
-    logger.debug(`Editing Assessment ${assessmentId} from Month ${monthId}`);
     const viewData = {
       title: "Edit Assessment",
       assessmentlist: assessmentStore.getMonth(monthId),

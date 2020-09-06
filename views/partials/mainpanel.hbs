@@ -16,24 +16,24 @@
         </div>
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
-{{#if member.goalDatePassed}}
-    <i class="circular red flag checkered icon"></i>
-    Goal {{member.goalWeight}}kg not reached
-    <hr>
-    Please set new goal
-{{else}}
-    {{#if member.goalReached}}
-        <i class="circular green flag checkered icon"></i>
-        Congratulations
-        <hr>
-        You've reached your goal:{{member.goalWeight}}kg
-    {{else}}
-        <i class="circular orange flag checkered icon"></i>
-        Kgs to goal: {{member.kilosFromGoalWeight}}
-        <hr>
-        Days to goal: {{daysFromGoal}}
-    {{/if}}
-{{/if}}
+                {{#if member.goalDatePassed}}
+                    <i class="circular red flag checkered icon"></i>
+                    Goal {{member.goalWeight}}kg not reached
+                    <hr>
+                    Please set new goal
+                {{else}}
+                    {{#if member.goalReached}}
+                        <i class="circular green flag checkered icon"></i>
+                        Congratulations
+                        <hr>
+                        You've reached your goal:{{member.goalWeight}}kg
+                    {{else}}
+                        <i class="circular orange flag checkered icon"></i>
+                        Kgs to goal: {{member.kilosFromGoalWeight}}
+                        <hr>
+                        Days to goal: {{daysFromGoal}}
+                    {{/if}}
+                {{/if}}
 
 
 

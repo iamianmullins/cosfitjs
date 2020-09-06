@@ -55,7 +55,7 @@ const dashboard = {
     } else if (latestMonth.latestWeight > newMeasurementMonth.latestWeight) {
       newMeasurementMonth.trend = true;
     }
-    logger.info("Adding measurement month for ", newMeasurementMonth);
+    logger.info("Adding measurement month for ", newMeasurementMonth.month);
     measurementStore.addMonth(newMeasurementMonth);
     response.redirect("/dashboard");
   },

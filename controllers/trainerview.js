@@ -15,7 +15,6 @@ const trainerview = {
       title: "Assessment List",
       months: assessmentStore.getUserMeasurements(currentMember.id),
       daysFromGoal: utility.returnGoalDays(currentMember.originalGoalDate),
-      variance: "10",
       user: loggedInUser,
       member: currentMember,
       memberid: currentMember.id

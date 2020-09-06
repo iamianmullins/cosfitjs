@@ -7,156 +7,157 @@
     <h2 class="ui center aligned header">
         Goal
     </h2>
-        <table class="ui selectable inverted celled table">
+    <table class="ui selectable inverted celled table">
 
-                <thead>
-                <tr>
-                    <th>Current Weight</th>
-                    <th>Goal Weight (kgs)</th>
+        <thead>
+        <tr>
+            <th>Current Weight</th>
+            <th>Goal Weight (kgs)</th>
 
-                    <th>Remaining</th>
-                    {{#if member.goalDatePassed}}
-                        <th>Days past goal</th>
-                    {{else}}
-                        <th>Days to goal</th>
-                    {{/if}}
-                    <th>Goal Date</th>
-                    <th>Update Goal Weight (kgs)</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    {{#if member.goalDatePassed}}
-                        <td><i class="red balance scale icon"></i>  {{member.currentWeight}} (kgs)</td>
-                        <td><i class="red balance scale icon"></i>  {{member.goalWeight}} (kgs)</td>
-                        <td><i class="red flag checkered icon"></i>  {{member.kilosFromGoalWeight}} (kgs)</td>
-                        <td><i class="red flag checkered icon"></i>  Goal not reached!</td>
-                        <td><i class="red flag checkered icon"></i>  {{member.goalDate}}</td>
-                    {{else}}
-                        {{#if member.goalReached}}
-                            <td><i class="green balance scale icon"></i>  {{member.currentWeight}} (kgs)</td>
-                            <td><i class="green balance scale icon"></i>  {{member.goalWeight}} (kgs)</td>
-                            <td><i class="green flag checkered icon"></i>  {{member.kilosFromGoalWeight}} (kgs)</td>
-                            <td><i class="green flag checkered icon"></i>  Goal reached!</td>
-                            <td><i class="green flag checkered icon"></i>  {{member.goalDate}}</td>
-                        {{else}}
-                            <td><i class="orange balance scale icon"></i>  {{member.currentWeight}} (kgs)</td>
-                            <td><i class="orange balance scale icon"></i>  {{member.goalWeight}} (kgs)</td>
-                            <td><i class="orange flag checkered icon"></i>  {{member.kilosFromGoalWeight}} (kgs)</td>
-                            <td><i class="orange flag checkered icon"></i>  {{daysFromGoal}}</td>
-                            <td><i class="orange flag checkered icon"></i>  {{member.goalDate}}</td>
-                        {{/if}}
-                    {{/if}}
-                    <td>
-                        <form class="ui fluid form" action="/trainerview/{{member.id}}/updateGoal" method="POST">
-                            <div class="two fields">
-                                <div class="field">
-                                    <input value="{{member.goalWeight}}" type="number" min="1" max="250" name="goalWeight" required>
+            <th>Remaining</th>
+            {{#if member.goalDatePassed}}
+                <th>Days past goal</th>
+            {{else}}
+                <th>Days to goal</th>
+            {{/if}}
+            <th>Goal Date</th>
+            <th>Update Goal Weight (kgs)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {{#if member.goalDatePassed}}
+                <td><i class="red balance scale icon"></i>  {{member.currentWeight}} (kgs)</td>
+                <td><i class="red balance scale icon"></i>  {{member.goalWeight}} (kgs)</td>
+                <td><i class="red flag checkered icon"></i>  {{member.kilosFromGoalWeight}} (kgs)</td>
+                <td><i class="red flag checkered icon"></i> Goal not reached!</td>
+                <td><i class="red flag checkered icon"></i>  {{member.goalDate}}</td>
+            {{else}}
+                {{#if member.goalReached}}
+                    <td><i class="green balance scale icon"></i>  {{member.currentWeight}} (kgs)</td>
+                    <td><i class="green balance scale icon"></i>  {{member.goalWeight}} (kgs)</td>
+                    <td><i class="green flag checkered icon"></i>  {{member.kilosFromGoalWeight}} (kgs)</td>
+                    <td><i class="green flag checkered icon"></i> Goal reached!</td>
+                    <td><i class="green flag checkered icon"></i>  {{member.goalDate}}</td>
+                {{else}}
+                    <td><i class="orange balance scale icon"></i>  {{member.currentWeight}} (kgs)</td>
+                    <td><i class="orange balance scale icon"></i>  {{member.goalWeight}} (kgs)</td>
+                    <td><i class="orange flag checkered icon"></i>  {{member.kilosFromGoalWeight}} (kgs)</td>
+                    <td><i class="orange flag checkered icon"></i>  {{daysFromGoal}}</td>
+                    <td><i class="orange flag checkered icon"></i>  {{member.goalDate}}</td>
+                {{/if}}
+            {{/if}}
+            <td>
+                <form class="ui fluid form" action="/trainerview/{{member.id}}/updateGoal" method="POST">
+                    <div class="two fields">
+                        <div class="field">
+                            <input value="{{member.goalWeight}}" type="number" min="1" max="250" name="goalWeight"
+                                   required>
+                        </div>
+                        <div class="field">
+                            <button class="ui vertical right floated animated blue submit button" tabindex="0">
+                                <div class="hidden content"><i class="ui check circle icon"></i></div>
+                                <div class="visible content">
+                                    Update Goal
                                 </div>
-                                <div class="field">
-                                    <button class="ui vertical right floated animated blue submit button" tabindex="0">
-                                        <div class="hidden content"><i class="ui check circle icon"></i></div>
-                                        <div class="visible content">
-                                            Update Goal
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="ui checked checkbox">
-                                <input type="checkbox" name="newGoal">
-                                <label>New Goal (Resets time 100 days)</label>
-                            </div>
-                        </form>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" name="newGoal">
+                        <label>New Goal (Resets time 100 days)</label>
+                    </div>
+                </form>
 
-            </div>
+                </div>
 
             </td>
 
 
-            </tr>
+        </tr>
 
 
-            </tbody>
-            </div>
-        </table>
+        </tbody>
+        </div>
+    </table>
 
     <hr>
 
     <section class="ui inverted stacked segment">
 
-    <h2 class="ui center aligned header">
-        Monthly Overview
-    </h2>
-    {{#each months}}
+        <h2 class="ui center aligned header">
+            Monthly Overview
+        </h2>
+        {{#each months}}
 
-        <table class="ui seven column  selectable inverted celled table">
-            <thead>
-            <tr>
-                <th>Trend</th>
-                <th>Month</th>
-                <th>Assessments</th>
-                <th>Starting Weight (kgs)</th>
-                <th>Latest Weight (kgs)</th>
-                <th>View Assessments</th>
-                <th>Delete Assessments</th>
+            <table class="ui seven column  selectable inverted celled table">
+                <thead>
+                <tr>
+                    <th>Trend</th>
+                    <th>Month</th>
+                    <th>Assessments</th>
+                    <th>Starting Weight (kgs)</th>
+                    <th>Latest Weight (kgs)</th>
+                    <th>View Assessments</th>
+                    <th>Delete Assessments</th>
 
-            </tr>
-            </thead>
-            <tbody>
+                </tr>
+                </thead>
+                <tbody>
 
-            <tr>
-                <td>
-                    {{#if trend}}
-                        <span class="ui green left ribbon label"><i
-                                class="ui large arrow alternate circle down icon"></i></span>
-                    {{else}}
-                        <span class="ui red left ribbon label"><i
-                                class="ui large arrow alternate circle up icon"></i></span>
-                    {{/if}}
-                </td>
-                <td>
-                    {{month}}
-                </td>
-                <td>
-                    {{assessmentcount}}
-                </td>
-                <td>
-                    {{startingWeight}}
-                </td>
-                <td>
-                    {{latestWeight}}
-                </td>
+                <tr>
+                    <td>
+                        {{#if trend}}
+                            <span class="ui green left ribbon label"><i
+                                    class="ui large arrow alternate circle down icon"></i></span>
+                        {{else}}
+                            <span class="ui red left ribbon label"><i
+                                    class="ui large arrow alternate circle up icon"></i></span>
+                        {{/if}}
+                    </td>
+                    <td>
+                        {{month}}
+                    </td>
+                    <td>
+                        {{assessmentcount}}
+                    </td>
+                    <td>
+                        {{startingWeight}}
+                    </td>
+                    <td>
+                        {{latestWeight}}
+                    </td>
 
 
-                <td>
+                    <td>
 
-                    <a href="/trainerassessmentlist/{{id}}/member/{{userid}}">
-                        <button class="ui vertical animated fade  blue labeled icon button" tabindex="0">
-                            <div class="visible content">View assessments</div>
-                            <div class="hidden content">
-                                <i class="ui check circle icon"></i>
-                            </div>
-                        </button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/trainerassessmentlist/{{id}}/deletemonth/{{userid}}">
+                        <a href="/trainerassessmentlist/{{id}}/member/{{userid}}">
+                            <button class="ui vertical animated fade  blue labeled icon button" tabindex="0">
+                                <div class="visible content">View assessments</div>
+                                <div class="hidden content">
+                                    <i class="ui check circle icon"></i>
+                                </div>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/trainerview/{{id}}/deletemonth/{{userid}}">
 
-                        <button class="ui vertical animated fade negative button" tabindex="0">
-                            <div class="hidden content">Delete</div>
-                            <div class="visible content">
-                                <i class="ui inverted trash icon"></i>
-                            </div>
+                            <button class="ui vertical animated fade negative button" tabindex="0">
+                                <div class="hidden content">Delete</div>
+                                <div class="visible content">
+                                    <i class="ui inverted trash icon"></i>
+                                </div>
 
-                        </button>
-                    </a>
+                            </button>
+                        </a>
 
-                </td>
+                    </td>
 
-            </tr>
+                </tr>
 
-            </tbody>
-        </table>
-    {{/each}}
-</section>
+                </tbody>
+            </table>
+        {{/each}}
+    </section>
 </section>

@@ -109,7 +109,7 @@ const userStore = {
     user.goalWeight = updatedUser.goalWeight;
     user.address = updatedUser.address;
     user.password = updatedUser.password;
-    user.kilosFromGoalWeight = updatedUser.currentWeight - updatedUser.goalWeight;
+    user.kilosFromGoalWeight = Math.abs(updatedUser.currentWeight - updatedUser.goalWeight);
     this.store.save();
   },
 

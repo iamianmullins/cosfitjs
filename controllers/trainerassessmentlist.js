@@ -36,7 +36,6 @@ const trainerassessmentlist = {
       waist: assessment.waist,
       comment: loggedInUser.firstName + ": " + request.body.comment
     };
-    logger.info(`Updating Assessment ${newAssessment.id} from Month ${request.body.comment}`);
     assessmentStore.updateAssessment(assessment, newAssessment);
     response.redirect("/trainerassessmentlist/" + monthId + "/member/" + month.userid);
   },

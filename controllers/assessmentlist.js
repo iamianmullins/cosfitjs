@@ -9,9 +9,9 @@ const utility = require("../models/utility.js");
 
 const assessmentlist = {
   index(request, response) {
+    logger.info("Assessment List rendering");
     const assessmentListId = request.params.id;
     const loggedInUser = accounts.getCurrentUser(request);
-    logger.debug("assessmentList id = ", assessmentListId);
     const viewData = {
       title: "Assessment List",
       assessmentlist: assessmentStore.getMonth(assessmentListId),
@@ -31,7 +31,6 @@ const assessmentlist = {
       kgsFromGoal: loggedInUser.previousWeight - loggedInUser.goalWeight,
       currentWeight: loggedInUser.previousWeight,
       previousWeight: loggedInUser.previousWeight
-
     };
     userStore.userWeightTracking(loggedInUser, newUserData);
     assessmentStore.updateMonth(monthId, loggedInUser.previousWeight);

@@ -13,8 +13,10 @@ const editsettings = {
       user: loggedInUser
     };
     if (loggedInUser.trainer === "1") {
+      logger.info("Edit trainer details rendering");
       response.render("trainersettings", viewData);
     } else {
+      logger.info("Edit member details rendering");
       response.render("editsettings", viewData);
     }
   },
