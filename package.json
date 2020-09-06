@@ -22,7 +22,7 @@
     "node": "12.x"
   },
   "repository": {
-    "url": ""
+    "url": "https://github.com/mullins1989/cosfitjs"
   },
   "license": "MIT",
   "keywords": [
