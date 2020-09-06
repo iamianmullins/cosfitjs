@@ -17,15 +17,52 @@ const assessmentStore = {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
+  getAssessment(id, assessmentId) {
+    const month = this.getMonth(id);
+    const assessments = month.measurements.filter(assessment => assessment.id == assessmentId);
+    return assessments[0];
+  },
+
+  getMostRecentAssessment(id) {
+    const month = this.getMonth(id);
+    return month.measurements[0];
+  },
+
+  getLatestMonth(userid) {
+    const assessmentList = _.reverse(this.store.findBy(this.collection, { userid: userid }));
+    const latestAssessment = assessmentList[0];
+    return latestAssessment;
+  },
+
+  getPreviousMonth(userid) {
+    const assessmentList = _.reverse(this.store.findBy(this.collection, { userid: userid }));
+    const latestAssessment = assessmentList[1];
+    return latestAssessment;
+  },
+
   getUserMeasurements(userid) {
     return _.reverse(this.store.findBy(this.collection, { userid: userid }));
   },
 
-
-  addMonth(month) {
-    this.store.add(this.collection, month);
+  addMonth(newMonth) {
+    this.store.add(this.collection, newMonth);
     this.store.save();
   },
+
+  addMeasurement(id, measurement) {
+    const month = this.getMonth(id);
+    month.assessmentcount++;
+    if (month.measurements.length > 0) {
+      month.latestWeight = measurement.weight;
+    } else if (month.measurements.length === 0) {
+      month.startingWeight = measurement.weight;
+      month.latestWeight = measurement.weight;
+    }
+    month.measurements.unshift(measurement);
+    this.store.save();
+  },
+
+
 
   removeMeasurementMonth(id) {
     const month = this.getMonth(id);
@@ -38,7 +75,6 @@ const assessmentStore = {
     this.store.save();
   },
 
-
   removeMeasurement(id, measurementId) {
     const month = this.getMonth(id);
     const measurementList = month.measurements;
@@ -47,26 +83,11 @@ const assessmentStore = {
     this.store.save();
   },
 
-  getAssessment(id, assessmentId) {
-    const month = this.getMonth(id);
-    const assessments = month.measurements.filter(assessment => assessment.id == assessmentId);
-    return assessments[0];
-  },
-
-  addMeasurement(id, measurement) {
-    const month = this.getMonth(id);
-    month.assessmentcount++;
-    if(month.measurements.length>0){
-      month.latestWeight = measurement.weight;
-    }
-    else if(month.measurements.length===0){
-      month.startingWeight = measurement.weight;
-      month.latestWeight = measurement.weight;
-    }
-    month.measurements.unshift(measurement);
+  updateMonth(monthId, currentWeight) {
+    const month = this.getMonth(monthId);
+    month.latestWeight = currentWeight;
     this.store.save();
   },
-
 
   updateAssessment(assessment, updatedAssessment) {
     assessment.weight = updatedAssessment.weight;

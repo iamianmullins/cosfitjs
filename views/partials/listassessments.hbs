@@ -1,23 +1,22 @@
-
-
 <section class="ui green stacked segment">
     {{#each assessmentlist.measurements}}
-    <table class="ui selectable inverted table">
-        <thead>
-        <tr>
-            <th>Date</th>
-            <th>Height</th>
-            <th>Weight Measurement</th>
-            <th>Chest Measurement</th>
-            <th>Abdominal Measurement</th>
-            <th>Thigh Measurement</th>
-            <th>Upper Arm Measurement</th>
-            <th>Waist Measurement</th>
-            <th>Delete Record</th>
-            <th>Edit Record</th>
-        </tr>
-        </thead>
-        <tbody>
+        <table class="ui selectable inverted table">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Height</th>
+                <th>Weight Measurement</th>
+                <th>Chest Measurement</th>
+                <th>Abdominal Measurement</th>
+                <th>Thigh Measurement</th>
+                <th>Upper Arm Measurement</th>
+                <th>Waist Measurement</th>
+                <th>Delete Record</th>
+                <th>Edit Record</th>
+                <th>Trend Record</th>
+            </tr>
+            </thead>
+            <tbody>
 
             <tr>
                 <td>
@@ -44,36 +43,49 @@
                 <td>
                     {{waist}}
                 </td>
+
                 <td>
-                    <button class="ui vertical animated fade fluid negative button" tabindex="0">
-                        <a href="/assessmentlist/{{../assessmentlist.id}}/deleteassessment/{{id}}">
+                    <a href="/assessmentlist/{{../assessmentlist.id}}/deleteassessment/{{id}}">
+                        <button class="ui vertical animated fade fluid negative button" tabindex="0">
+
                             <div class="hidden content">Delete</div>
                             <div class="visible content">
                                 <i class="ui inverted trash icon"></i>
                             </div>
-                        </a>
-                    </button>
+
+                        </button>
+                    </a>
                 </td>
                 <td>
-                    <button class="ui vertical animated fade fluid orange button" tabindex="0">
-                        <a href="/assessment/{{../assessmentlist.id}}/editassessment/{{id}}">
+                    <a href="/assessment/{{../assessmentlist.id}}/editassessment/{{id}}">
+                        <button class="ui vertical animated fade fluid orange button" tabindex="0">
+
                             <div class="hidden content">Edit</div>
                             <div class="visible content">
                                 <i class="ui inverted pencil icon"></i>
                             </div>
-                        </a>
-                    </button>
+
+                        </button>
+                    </a>
+                </td>
+                <td>
+                    {{#if trend}}
+                        <span class="ui green right ribbon label"><i
+                                class="ui large arrow alternate circle down icon"></i></span>
+                    {{else}}
+                        <span class="ui red right ribbon label"><i class="ui large arrow alternate circle up icon"></i></span>
+                    {{/if}}
                 </td>
             </tr>
             <tr>
                 <td>Comments</td>
                 <td colspan="3">
-                    <div class="ui left pointing red basic label" >{{comment}}</div>
+                    <div class="ui left pointing red basic label">{{comment}}</div>
                 </td>
                 <td colspan="6"></td>
             </tr>
 
-        </tbody>
-    </table>
-        {{/each}}
+            </tbody>
+        </table>
+    {{/each}}
 </section>

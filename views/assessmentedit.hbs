@@ -1,20 +1,21 @@
 {{> menu}}
 
-<form class="ui inverted stacked segment form" action="/assessment/{{assessmentlist.id}}/updateassessment/{{measurement.id}}" method="POST">
-  <div class="three fields">
-    <div class="field">
-      <label>Weight</label>
-      <input placeholder="Title" type="text" name="weight" value="{{measurement.weight}}">
+<form class="ui inverted stacked segment form"
+      action="/assessment/{{assessmentlist.id}}/updateassessment/{{measurement.id}}" method="POST">
+    <div class="three fields">
+        <div class="field">
+            <label>Weight</label>
+            <input placeholder="Title" type="text" name="weight" value="{{measurement.weight}}">
+        </div>
+        <div class="field">
+            <label>Chest</label>
+            <input placeholder="Artist" type="text" name="chest" value="{{measurement.chest}}">
+        </div>
+        <div class="field">
+            <label>Abdominal</label>
+            <input placeholder="00" type="number" name="abdominal" value="{{measurement.abdominal}}">
+        </div>
     </div>
-    <div class="field">
-      <label>Chest</label>
-      <input placeholder="Artist" type="text" name="chest" value="{{measurement.chest}}">
-    </div>
-    <div class="field">
-      <label>Abdominal</label>
-      <input placeholder="00" type="number" name="abdominal" value="{{measurement.abdominal}}">
-    </div>
-  </div>
     <div class="three fields">
         <div class="field">
             <label>Thigh</label>
@@ -29,5 +30,5 @@
             <input placeholder="00" type="number" name="waist" value="{{measurement.waist}}">
         </div>
     </div>
-  <button class="ui blue submit button">Update Assessment</button>
+    <button class="ui blue submit button">Update Assessment</button>
 </form>

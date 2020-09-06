@@ -1,50 +1,49 @@
 {
   "users": [
     {
-      "firstName": "Homer",
-      "lastName": "Simpson",
-      "dob": "10/06/1968",
-      "address": "742 Evergreen Terrace",
-      "gender": "Male",
-      "height": 1.778,
-      "startWeight": 73,
-      "currentWeight": "86",
-      "goalWeight": 70,
-      "email": "homer@simpson.com",
-      "password": "secret",
-      "trainer": "0",
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
-    },
-    {
-      "firstName": "Marge",
-      "lastName": "Simpson",
-      "dob": "10/06/1972",
-      "address": "742 Egrn Tce",
-      "gender": "Female",
-      "height": 1.65,
-      "startWeight": 60,
-      "currentWeight": 65,
-      "goalWeight": 70,
-      "email": "marge@simpson.com",
-      "password": "secret",
-      "trainer": "0",
-      "id": "3a526997-5269-4d80-8273-0882735a5269"
-    },
-    {
-      "firstName": "Trey",
+      "firstName": "Tre",
       "lastName": "Ner",
+      "gender": "Female",
+      "dob": "1978-09-01",
+      "address": "Waterford, Ireland",
+      "phoneNumber": "0861234567",
       "email": "trainer@cosfit.com",
       "password": "secret",
       "trainer": "1",
-      "id": "38e25010-eb9d-11ea-b272-2322d751f59b"
+      "id": "Tre-eb9d-11ea-b272-2322d751f59b"
     },
     {
-      "firstName": "Ian",
-      "lastName": "Mullins",
-      "email": "ian@mullins.com",
+      "firstName": "Jennie",
+      "lastName": "mullins",
+      "gender": "Female",
+      "dob": "1995-10-31",
+      "height": "1.6",
+      "startWeight": "50",
+      "goalWeight": "50",
+      "address": "storybrooke",
+      "email": "mully.com",
+      "password": "mememe",
+      "trainer": "0",
+      "id": "eb86b8f0-efb7-11ea-8ae7-fb8a1f4dcbf3",
+      "previousWeight": 52,
+      "currentWeight": 52,
+      "weightClassGoalReached": true,
+      "bmiCatGoalReached": true,
+      "bmiGoalReached": true,
+      "kilosFromGoalWeight": 2,
+      "goalReached": false
+    },
+    {
+      "id": "585e43f0-efc5-11ea-adfb-7fef63b73dec",
+      "firstName": "Homer",
+      "lastName": "Homer",
+      "gender": "Undisclosed",
+      "dob": "6/8/2020 ",
+      "address": "tbd",
+      "phoneNumber": "01",
+      "email": "homer@simpson.com",
       "password": "secret",
-      "trainer": "1",
-      "id": "38e25010-eb9d-11ea-b272-2322d751f59b"
+      "trainer": "1"
     }
   ]
 }

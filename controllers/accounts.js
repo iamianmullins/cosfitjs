@@ -34,6 +34,14 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuid.v1();
+    user.trainer = "0";
+    user.goalWeight = Number(request.body.goalWeight);
+    user.previousWeight = Number(request.body.startWeight);
+    user.currentWeight = Number(request.body.startWeight);
+    user.weightClassGoalReached = true;
+    user.bmiCatGoalReached = false;
+    user.bmiGoalReached = false;
+    user.kilosFromGoalWeight = Number(request.body.startWeight) - Number(request.body.goalWeight);
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
     response.redirect("/");
@@ -41,18 +49,16 @@ const accounts = {
 
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
-    let isTrainer = user.trainer;
-    if (user&&isTrainer==="1") {
+    if ((user) && (user.trainer === "1")) {
       response.cookie("assessments", user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect("/trainerdashboard");
-    }
-    else if (user) {
+    } else if (user) {
       response.cookie("assessments", user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
-      response.redirect("/login");
+      response.redirect("/");
     }
   },
 

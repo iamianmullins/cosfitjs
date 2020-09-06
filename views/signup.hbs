@@ -1,25 +1,5 @@
 {{> welcomemenu id="signup"}}
 <div class="ui grid">
-
-    <script>
-        $('.ui.dropdown')
-                .dropdown({
-                    values: [
-                        {
-                            name: 'Male',
-                            value: 'male'
-                        },
-                        {
-                            name     : 'Female',
-                            value    : 'female',
-                            selected : true
-                        }
-                    ]
-                })
-        ;
-    </script>
-
-
     {{> branding}}
 
     <div class="four wide column">
@@ -31,11 +11,11 @@
             <div class="two fields">
                 <div class="field">
                     <label>First Name*</label>
-                    <input placeholder="First Name" type="text"  name="firstName" required>
+                    <input placeholder="First Name" type="text" name="firstName" required>
                 </div>
                 <div class="field">
                     <label>Last Name*</label>
-                    <input placeholder="Last Name" type="text"  name="lastName" required>
+                    <input placeholder="Last Name" type="text" name="lastName" required>
                 </div>
             </div>
             <div class="two fields">
@@ -49,7 +29,7 @@
                 </div>
                 <div class="field">
                     <label>DOB*</label>
-                    <input placeholder="Date of Birth" type="date" name="dob" required>
+                    <input placeholder="Date of Birth" type="date" min="1900-01-01" name="dob" required>
                 </div>
             </div>
             <div class="three fields">
@@ -59,17 +39,17 @@
                 </div>
                 <div class="field">
                     <label>Weight*</label>
-                    <input placeholder="Weight" type="text" name="startWeight" required>
+                    <input placeholder="Weight" type="text" name="startWeight" min="10" max="250" required>
                 </div>
                 <div class="field">
                     <label>Goal Weight*</label>
-                    <input placeholder="Goal Weight" type="text" name="goalWeight" required>
+                    <input placeholder="Goal Weight" type="text" name="goalWeight" min="10" max="250" required>
                 </div>
 
             </div>
             <div class="field">
                 <label>Address</label>
-                <input placeholder="Address" type="text"  name="address">
+                <input placeholder="Address" type="text" name="address">
             </div>
             <div class="two fields">
                 <div class="field">

@@ -9,17 +9,28 @@
                 <i class="circular balance scale icon"></i>
                 Member
                 <hr>
-                {{user.firstName}} {{user.lastName}}
+                {{member.firstName}} {{member.lastName}}
             </h2>
         </div>
         <div class="two wide column">
         </div>
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
-                <i class="circular balance scale icon"></i>
-                Goal weight: 90kg
-                <hr>
-                Current weight: {{user.currentWeight}}kg
+
+                {{#if member.goalReached}}
+                    <i class="circular balance scale icon"></i>
+                    Congratulations
+                    <hr>
+                    You've reached your goal:{{member.goalWeight}}kg
+                {{else}}
+                    <i class="circular balance scale icon"></i>
+                    Goal weight(kgs): {{member.goalWeight}}kg
+                    <hr>
+                    Remaining(kgs): {{member.kilosFromGoalWeight}}kg
+                {{/if}}
+
+
+
             </h2>
         </div>
     </div>
@@ -29,9 +40,14 @@
 
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
-                <i class="circular heart icon"></i>
+                {{#if member.weightClassGoalReached}}
+                    <i class="circular green heart icon"></i>
+                {{else}}
+                    <i class="circular red heart icon"></i>
+                {{/if}}
                 Weight Classification
                 <hr>
+
                 <p>
                     {{isideal}}
                 </p>
@@ -41,7 +57,11 @@
         </div>
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
-                <i class="circular heartbeat icon"></i>
+                {{#if member.bmiGoalReached}}
+                    <i class="circular green heartbeat icon"></i>
+                {{else}}
+                    <i class="circular red heartbeat icon"></i>
+                {{/if}}
                 BMI
                 <hr>
                 <p>
@@ -53,7 +73,11 @@
         </div>
         <div class="four wide column">
             <h2 class="ui center aligned icon header">
-                <i class="circular chart pie icon"></i>
+                {{#if member.bmiCatGoalReached}}
+                    <i class="circular green chart pie icon"></i>
+                {{else}}
+                    <i class="circular red chart pie icon"></i>
+                {{/if}}
                 BMI Category
                 <hr>
                 <p>

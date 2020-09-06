@@ -1,0 +1,122 @@
+<nav class="ui inverted tabular menu">
+    <header class="ui header item"><i class="circular red inverted heartbeat icon"></i> Cosfit</header>
+    <div class="right menu">
+        <a id="logout" class="item" href="/logout"> Logout &nbsp;<i class="sign out alternate icon"></i> </a>
+    </div>
+</nav>
+
+
+
+<section class="ui raised segment">
+    <header class="ui header">
+        Admin Panel
+    </header>
+
+
+    <div class="ui red message">Only use this screen if you are authorised to do so.
+        If you are not authorised, please log out immediately!</div>
+    <div class="sixteen wide column">
+        <header class="ui header">
+            Add Trainer
+        </header>
+        <form class="ui fluid inverted segment form" action="/admin/addtrainer" method="POST">
+            <table class="ui center aligned selectable inverted fluid table">
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Add Trainer</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input placeholder="First Name" type="text" name="firstName" required></td>
+                    <td><input placeholder="Last Name" type="text" name="lastName" required></td>
+                    <td><input placeholder="Email" type="text" name="email" required></td>
+                    <td><input placeholder="Password" type="text" name="password" required></td>
+                    <td>
+                        <button class="ui vertical animated fluid green button" tabindex="0">
+                            <div class="hidden content"><span class="ui black text">Add Trainer</span></div>
+                            <div class="visible content">
+                                <i class="ui check circle icon"></i>
+                            </div>
+                            </a>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+
+    <header class="ui header">
+        Trainer List: {{trainerCount}}
+    </header>
+    <table class="ui inverted fixed selectable table">
+        <thead>
+        <tr>
+            <th>Trainer Name</th>
+            <th>Trainer Email</th>
+            <th>Delete Trainer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each trainers}}
+        <tr>
+
+            <td> {{firstName}} {{lastName}}</td>
+            <td> {{email}} </td>
+            <td>
+                <a href="/admin/deleteUser/{{id}}">
+                <button class="ui vertical animated fluid negative button" tabindex="0">
+                    <div class="visible content">Delete Trainer</div>
+                    <div class="hidden content">
+                        <i class="ui inverted user minus icon"></i>
+                    </div>
+            </button>
+                </a>
+            </td>
+        </tr>
+        <tr>
+{{/each}}
+
+        </tbody>
+    </table>
+
+    <header class="ui header">
+        Member List: {{memberCount}}
+    </header>
+    <table class="ui inverted fixed selectable table">
+        <thead>
+        <tr>
+            <th>Member Name</th>
+            <th>Member Email</th>
+            <th>Delete Member</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each members}}
+            <tr>
+                <td> {{firstName}} {{lastName}}</td>
+                <td> {{email}} </td>
+                <td>
+                    <a href="/admin/deleteUser/{{id}}">
+                    <button class="ui vertical animated fluid negative button" tabindex="0">
+
+                        <div class="visible content">Delete Member</div>
+                        <div class="hidden content">
+                            <i class="ui inverted user minus icon"></i>
+                        </div>
+                </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+        {{/each}}
+
+        </tbody>
+    </table>
+</section></section>

@@ -1,10 +1,58 @@
 {{> menu id="dashboard"}}
 
 <section class="ui segment">
-
     {{> mainpanel}}
-    {{> addmonth}}
-    {{> listmonths}}
+    <hr>
+    <section class="ui inverted stacked segment">
+        <h2 class="ui center aligned header">
+            Goal
+        </h2>
 
-</section>
+        <table class="ui selectable inverted celled table">
+            <div class="ui inverted form">
+                <thead>
+                <tr>
+                    <th>Member Name</th>
+                    <th>Current Weight (kgs)</th>
+                    <th>Goal Weight (kgs)</th>
 
+                    <th>Kgs from goal</th>
+                    <th>Update Goal Weight Loss (kgs)</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                <tr>
+                    <td><i class="orange user icon"></i> {{member.firstName}}   </td>
+                    <td><i class="orange balance scale icon"></i>  {{member.currentWeight}}  </td>
+                    <td><i class="orange balance scale icon"></i>  {{member.goalWeight}}  </td>
+                    <td><i class="orange flag checkered icon"></i>  {{member.kilosFromGoalWeight}}</td>
+                    <td>
+                        <form class="ui fluid form" action="/dashboard/{{member.id}}/updategoal" method="POST">
+                            <div class="two fields">
+                                <div class="field">
+                                    <input value="{{member.goalWeight}}" type="text" name="goalWeight" required>
+                                </div>
+                                <div class="field">
+                                    <button class="ui vertical right floated animated blue submit button" tabindex="0">
+                                        <div class="hidden content"><i class="ui check circle icon"></i></div>
+                                        <div class="visible content">
+                                            Update Goal
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+
+
+                </tr>
+
+
+                </tbody>
+            </div>
+        </table>
+    </section>
+    <hr>
+{{> listmonths}}
