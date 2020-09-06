@@ -128,12 +128,59 @@ const userStore = {
 
   updateGoal(user, updatedGoal) {
     user.goalWeight = updatedGoal;
-    user.kilosFromGoalWeight = user.currentWeight - user.goalWeight;
-    if (user.kilosFromGoalWeight <= 0) {
-      user.goalReached = true;
-    } else if (user.kilosFromGoalWeight > 0) {
+    user.goalDatePassed = false;
+    user.goalReached = false;
+    if(user.daysFromGoal<=0) {
+      user.goalDatePassed = false;
+      if (user.kilosFromGoalWeight <= 0) {
+        user.goalReached = true;
+      } else {
+        user.goalDatePassed = true;
+        user.goalReached = false;
+      }
+    }
+    user.kilosFromGoalWeight =  Math.abs(user.currentWeight - user.goalWeight);
+    this.checkGoalDate(user);
+    this.store.save();
+  },
+
+  updateGoalOnLogin() {
+    const users= this.store.findAll(this.collection);
+    for(let i=0; i<users.length; i++) {
+      if (users[i].trainer === "0") {
+      this.checkGoalDate(users[i]);
+    }
+    }
+    this.store.save();
+  },
+
+  checkGoalDate(user)
+  {
+    user.goalDatePassed = false;
+    const currentDate = new Date();
+    if (user.originalGoalDate >= currentDate) {
+      user.goalDatePassed = false;
+      if ((user.kilosFromGoalWeight <= 1)) {
+        user.goalReached = true;
+      }
+    }
+    else {
+      user.goalDatePassed = true;
       user.goalReached = false;
     }
+    this.store.save();
+  },
+
+  newGoal(user, updatedGoal, goalDate, goalDateFormatted, goalDays) {
+    user.goalDate = goalDateFormatted;
+    user.originalGoalDate = goalDate;
+    user.goalWeight = updatedGoal;
+    user.goalDatePassed = false;
+    user.daysToGoal = goalDays;
+    user.goalDatePassed = false;
+    user.goalReached = false;
+    user.kilosFromGoalWeight = Math.abs(user.currentWeight - user.goalWeight);
+    this.checkGoalDate(user);
     this.store.save();
   },
 
@@ -141,11 +188,7 @@ const userStore = {
     user.kilosFromGoalWeight = newData.kgsFromGoal;
     user.previousWeight = newData.previousWeight;
     user.currentWeight = newData.currentWeight;
-    if (newData.kgsFromGoal <= 0) {
-      user.goalReached = true;
-    } else {
-      user.goalReached = false;
-    }
+    this.checkGoalDate(user)
 
     if (utility.idealBw(user) === "Ideal") {
       user.weightClassGoalReached = true;

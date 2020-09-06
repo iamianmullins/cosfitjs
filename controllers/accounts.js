@@ -3,6 +3,7 @@
 const userstore = require("../models/user-store");
 const logger = require("../utils/logger");
 const uuid = require("uuid");
+const utility = require("../models/utility.js");
 
 const accounts = {
   index(request, response) {
@@ -42,12 +43,16 @@ const accounts = {
     user.bmiCatGoalReached = false;
     user.bmiGoalReached = false;
     user.kilosFromGoalWeight = Number(request.body.startWeight) - Number(request.body.goalWeight);
+    user.goalDate = utility.formatGoalDate();
+    user.originalGoalDate = utility.setGoalDate();
+    user.daysToGoal = 100;
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
     response.redirect("/");
   },
 
   authenticate(request, response) {
+    userstore.updateGoalOnLogin();
     const user = userstore.getUserByEmail(request.body.email);
     if ((user) && (user.trainer === "1")) {
       response.cookie("assessments", user.email);

@@ -30,15 +30,15 @@
             <div class="three fields">
                 <div class="field">
                     <label>Height(mtrs)*</label>
-                    <input value="{{user.height}}" type="text" name="height" disabled>
+                    <input value="{{user.height}}" type="number" min="1" max="3" name="height" disabled>
                 </div>
                 <div class="field">
                     <label>Weight(kgs)*</label>
-                    <input value="{{user.currentWeight}}" type="text" name="currentWeight" required>
+                    <input value="{{user.currentWeight}}" type="number" min="10" max="250"  name="currentWeight" required>
                 </div>
                 <div class="field">
                     <label>Goal Weight(kgs)*</label>
-                    <input value="{{user.goalWeight}}" type="text" name="goalWeight" required>
+                    <input value="{{user.goalWeight}}" type="number" min="10" max="250"  name="goalWeight" required>
                 </div>
 
             </div>

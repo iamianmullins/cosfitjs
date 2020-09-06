@@ -17,11 +17,11 @@ const dashboard = {
       month: utility.monthName(),
       member: loggedInUser,
       user: loggedInUser,
+      daysFromGoal: utility.returnGoalDays(loggedInUser.originalGoalDate),
       bmi: utility.getBmi(loggedInUser),
       bmicat: utility.getBmiCat(loggedInUser),
       isideal: utility.idealBw(loggedInUser)
     };
-    logger.info("about to render", measurementStore.getAllMonths());
     response.render("dashboard", viewData);
   },
 
@@ -60,12 +60,23 @@ const dashboard = {
     response.redirect("/dashboard");
   },
 
+
   updateGoal(request, response) {
     const currentMember = userStore.getUserById(request.params.id);
     const goalWeight = request.body.goalWeight;
-    userStore.updateGoal(currentMember, goalWeight);
+    const isNewGoal = request.body.newGoal;
+    console.info(isNewGoal);
+    const goalDateFormated = utility.formatGoalDate();
+    const goalDate = utility.setGoalDate();
+    const goalDays = utility.returnGoalDays();
+    if(isNewGoal){
+      userStore.newGoal(currentMember, goalWeight, goalDate, goalDateFormated, goalDays);
+    }
+    else{
+      userStore.updateGoal(currentMember, goalWeight, goalDate);
+    }
     response.redirect("/dashboard");
-  }
+  },
 };
 
 module.exports = dashboard;

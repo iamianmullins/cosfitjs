@@ -5,30 +5,35 @@
     <div class="three fields">
         <div class="field">
             <label>Weight</label>
-            <input placeholder="Title" type="text" name="weight" value="{{measurement.weight}}">
+            <input type="number" name="weight" min="1" max="250" value="{{measurement.weight}}" required>
         </div>
         <div class="field">
             <label>Chest</label>
-            <input placeholder="Artist" type="text" name="chest" value="{{measurement.chest}}">
+            <input type="number" name="chest" min="1" max="250" value="{{measurement.chest}}" required>
         </div>
         <div class="field">
             <label>Abdominal</label>
-            <input placeholder="00" type="number" name="abdominal" value="{{measurement.abdominal}}">
+            <input type="number" name="abdominal" min="1" max="250" value="{{measurement.abdominal}}" required>
         </div>
     </div>
     <div class="three fields">
         <div class="field">
             <label>Thigh</label>
-            <input placeholder="Title" type="text" name="thigh" value="{{measurement.thigh}}">
+            <input type="number" name="thigh" min="1" max="250" value="{{measurement.thigh}}" required>
         </div>
         <div class="field">
             <label>Upper Arm</label>
-            <input placeholder="Artist" type="text" name="upperArm" value="{{measurement.upperArm}}">
+            <input type="number" name="upperArm" min="1" max="250" value="{{measurement.upperArm}}" required>
         </div>
         <div class="field">
             <label>Waist</label>
-            <input placeholder="00" type="number" name="waist" value="{{measurement.waist}}">
+            <input type="number" name="waist" min="1" max="250" value="{{measurement.waist}}" required>
         </div>
     </div>
-    <button class="ui blue submit button">Update Assessment</button>
+    <button class="ui vertical animated fade fluid green labeled icon submit button" tabindex="0">
+        <div class="visible content"><i class="icon edit"></i> Edit Assessment</div>
+        <div class="hidden content">
+            <i class="ui check circle icon"></i>
+        </div>
+    </button>
 </form>

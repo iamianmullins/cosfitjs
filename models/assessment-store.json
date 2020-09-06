@@ -110,10 +110,34 @@
       "id": "98522120-efc0-11ea-90b7-17289e8dd4e2",
       "userid": "eb86b8f0-efb7-11ea-8ae7-fb8a1f4dcbf3",
       "month": "September - 2020",
-      "assessmentcount": 2,
+      "assessmentcount": 4,
       "startingWeight": 53,
-      "latestWeight": 52,
+      "latestWeight": 55,
       "measurements": [
+        {
+          "id": "a2d4a3d0-f03c-11ea-82f3-9146f8086c2c",
+          "date": "0/8/2020 - 13:29:40",
+          "height": 1.6,
+          "weight": 55,
+          "chest": 0,
+          "abdominal": 0,
+          "thigh": 0,
+          "upperArm": 0,
+          "waist": 0,
+          "trend": false
+        },
+        {
+          "id": "bfb21240-f036-11ea-a91f-6f1fe897c288",
+          "date": "0/8/2020 - 12:47:32",
+          "height": 1.6,
+          "weight": 50,
+          "chest": 0,
+          "abdominal": 0,
+          "thigh": 0,
+          "upperArm": 0,
+          "waist": 0,
+          "trend": true
+        },
         {
           "id": "c1a29b40-efc0-11ea-ab27-135f952eae8b",
           "date": "6/8/2020 - 22:42:54",
@@ -138,6 +162,101 @@
           "upperArm": 0,
           "waist": 0,
           "trend": true
+        }
+      ],
+      "trend": true
+    },
+    {
+      "id": "b6c80ba0-f043-11ea-8bdc-59f6b32a7002",
+      "userid": "eb86b8f0-efb7-11ea-8ae7-fb8a1f4dcbf3",
+      "month": "September - 2020",
+      "assessmentcount": 0,
+      "startingWeight": 55,
+      "latestWeight": 55,
+      "measurements": [],
+      "trend": true
+    },
+    {
+      "id": "be10afc0-f061-11ea-9860-a1a0c5557289",
+      "userid": "5a31ab80-f061-11ea-9860-a1a0c5557289",
+      "month": "September - 2020",
+      "assessmentcount": 2,
+      "startingWeight": 60,
+      "latestWeight": 55,
+      "measurements": [
+        {
+          "id": "cb3ae530-f061-11ea-9860-a1a0c5557289",
+          "date": "0/8/2020 - 17:55:40",
+          "height": 1.6,
+          "weight": 55,
+          "chest": 0,
+          "abdominal": 0,
+          "thigh": 0,
+          "upperArm": 0,
+          "waist": 0,
+          "trend": true
+        },
+        {
+          "id": "c424ee30-f061-11ea-9860-a1a0c5557289",
+          "date": "0/8/2020 - 17:55:28",
+          "height": 1.6,
+          "weight": 60,
+          "chest": 0,
+          "abdominal": 0,
+          "thigh": 0,
+          "upperArm": 0,
+          "waist": 0,
+          "trend": true
+        }
+      ],
+      "trend": true
+    },
+    {
+      "id": "76961fc0-f063-11ea-a551-f363619008e8",
+      "userid": "73234020-f063-11ea-a551-f363619008e8",
+      "month": "September - 2020",
+      "assessmentcount": 3,
+      "startingWeight": 100,
+      "latestWeight": 75,
+      "measurements": [
+        {
+          "id": "7efbd2d0-f064-11ea-89e4-77c2b4b2e1af",
+          "date": "0/8/2020 - 18:15:0",
+          "height": 1.5,
+          "weight": 75,
+          "chest": 10,
+          "abdominal": 10,
+          "thigh": 12,
+          "upperArm": 50,
+          "waist": 10,
+          "trend": false,
+          "comment": "Trey: Well done, good workout"
+        },
+        {
+          "id": "68b4d9e0-f064-11ea-a551-f363619008e8",
+          "date": "0/8/2020 - 18:14:23",
+          "height": 1.5,
+          "weight": 100,
+          "chest": 2000,
+          "abdominal": 100,
+          "thigh": 50,
+          "upperArm": 50,
+          "waist": 50,
+          "trend": true,
+          "comment": "Trey: WOOHOO"
+        },
+        {
+          "id": "ee254570-f063-11ea-a551-f363619008e8",
+          "date": "0/8/2020 - 18:10:57",
+          "height": 1.5,
+          "weight": 100,
+          "chest": 10,
+          "abdominal": 10,
+          "thigh": 12,
+          "upperArm": 15,
+          "waist": 20,
+          "trend": true,
+          "comment": "Trey: awesome"
         }
       ],
       "trend": true

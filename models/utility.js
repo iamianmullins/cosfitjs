@@ -1,5 +1,35 @@
 "use strict";
 const utility = {
+
+  setGoalDate(){
+    const currentDate = new Date();
+    const goalDate = currentDate.setDate(currentDate.getDate() + 100);
+    return goalDate;
+  },
+
+  currentDateTime(){
+    const currentDate = new Date();
+    const currentDateTime = currentDate.setDate(currentDate.getDate());
+    return currentDateTime;
+  },
+
+  formatGoalDate(){
+    const currentDate = new Date();
+    const goalDate = currentDate.setDate(currentDate.getDate() + 100);
+    const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(goalDate);
+    const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(goalDate);
+    const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(currentDate);
+    const dateFormatted = da + "/" + mo  + "/" +  ye;
+    return dateFormatted;
+  },
+
+  returnGoalDays(originalGoalDate){
+    const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    const currentDate = new Date();
+    const dayVariance = Math.round(Math.abs((currentDate - originalGoalDate) / oneDay));
+    return dayVariance;
+  },
+
   monthName() {
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
@@ -27,9 +57,6 @@ const utility = {
     const year = now.getFullYear();
     const month = now.getMonth();
     const day = now.getDay();
-    const hours = now.getHours();
-    const minu = now.getMinutes();
-    const sec = now.getSeconds();
     return (day + "/" + month + "/" + year);
   },
 
@@ -98,5 +125,5 @@ const utility = {
   }
 
 };
-
 module.exports = utility;
+
