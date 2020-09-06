@@ -1,5 +1,5 @@
 {
-  "name": "Cosfit Dashboard",
+  "name": "cosfitdashboard",
   "version": "0.0.1",
   "description": "Cosfit assessment dashboard",
   "main": "server.js",
